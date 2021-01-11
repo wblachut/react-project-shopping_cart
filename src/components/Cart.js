@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../style/Cart.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 const Cart = (props) => {
@@ -18,6 +20,39 @@ const Cart = (props) => {
     fontWeight: '600'
   };
 
+  const onDeleteItem = (id) => {
+    let cartList = [...props.cart].filter((item) => item.id !== id);
+    props.setCart(cartList);
+    props.updateQuantity();
+    props.updateTotal();
+  }
+
+  const onAddQuantity = (id) => {
+    let cartList = [...props.cart]
+    cartList.forEach(item => {
+      if (item.id === id) {
+        item.quantity += 1;
+        console.log('update quantity to:', item.quantity);
+      }
+    });
+    props.setCart(cartList);
+    props.updateQuantity();
+    props.updateTotal();
+  }
+
+  const onSubtractQuantity = (id) => {
+    let cartList = [...props.cart]
+    console.log(cartList);
+    cartList.forEach(item => {
+      if (item.id === id && item.quantity > 1) {
+        item.quantity -= 1;
+        console.log('update quantity to:', item.quantity);
+      }
+    });
+    props.updateQuantity();
+    props.updateTotal();
+  }
+
   return (
     <div>
     <div className="top-row" style={bgStyle}><h1> Your Cart </h1></div>
@@ -25,30 +60,34 @@ const Cart = (props) => {
       <div className="cart-title"><h2> Items in the cart ({props.itemsQuantity}) :</h2></div>
       <div className="cart-table">
         <ol>
-        {props.cart.map(item => (
+        {props.cart.map((item) => (
           <li key={item.id}>
           <Link style={linkStyle} to={`store/${item.id} `}>
             <img src={item.image} alt={item.name}/>
             <span className="">{item.name}</span>
           </Link>
+          <div className="cart-item-menage">
           <p className="item-price">{item.price}</p>
-          <button className="add-rem" onClick={() => {
-            props.setCart(...props.cart, props.cart[item.id].quantity + 1)}}>+</button>
+          <button className="add-rem" onClick={(id) => {onAddQuantity(item.id)}}>+</button>
 
             {item.quantity}
 
-            <button className="add-rem" onClick={() => {
-            props.setCart(...props.cart, props.cart[item.id].quantity - 1)}}>-</button>
+            <button className="add-rem" onClick={(id) => {onSubtractQuantity(item.id)}}>-</button>
             
-            <span></span>
-            <hr/>        
+
+            <button  id={item.id} onClick = {(id) => onDeleteItem(item.id)}
+                  className="trash-del"><FontAwesomeIcon icon={["fas", "trash"]} className= "trash-icon"/></button>
+                  </div>
           </li>  
         ))}
+        <li>
+        </li>
+        <div className="total"><b>Total: {props.total} €</b>
+        <button className="finalize-btn" onClick={props.addToCart}>Finalize</button>
+        </div>
         </ol>
-        <div className="total">{props.total}</div>
-        <button className="cart" onClick={() => {props.addToCart(props.cart[0], 5)}}>add to cartt</button>
       </div>
-      </div>
+      </div><div></div>
       </div>
   );
 }

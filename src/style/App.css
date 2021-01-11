@@ -25,7 +25,6 @@ body {
   margin: 0px;
   text-align: center;
   color: #fff;
-
 }
 
 .home-top-row {
@@ -35,7 +34,21 @@ body {
   -webkit-text-fill-color: transparent;
   font-weight: 800;
 }
+.div-home {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+}
 
+.home-image {
+  background-image: url('https://images.unsplash.com/photo-1534592302589-d4f8f14c6f47?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1956&q=80');
+  background-size: cover;
+  width: 90vw;
+  height: 15vw;
+  padding: 0%;
+  margin: auto;
+}
 .item-add-to-cart {
   font-size: 1.4rem;
 }
@@ -67,7 +80,7 @@ body {
 
 }
 
-.add-to-cart-button {
+.add-to-cart-button, .finalize-btn {
   margin-left: 20px;
   border: 2px solid white;
   cursor: pointer;
@@ -80,8 +93,10 @@ body {
 }
 
 .add-rem:hover,  
-.add-to-cart-button:hover  {
+.add-to-cart-button:hover,
+.finalize-btn:hover  {
   background-color: saddlebrown;
+  transform: scale(1.05);
 }
 
 input::-webkit-outer-spin-button,

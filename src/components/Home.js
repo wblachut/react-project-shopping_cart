@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <div className="Home">
     <div className="home-top-row" style={bgStyle}><h1> HOME </h1></div>
+    <div className="home-image"></div>
     </div>
   );
 }

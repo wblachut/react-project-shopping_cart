@@ -4,7 +4,6 @@
   border-radius: 10px;
   margin: auto;
   margin-bottom: 10vh;
-
 }
 
 .cart-title {
@@ -12,19 +11,18 @@
   padding: 40px;
 }
 
-
-
-.cart-table  {
+.cart-table {
   align-items: center;
+  margin-bottom: 5vh;
 }
 
 .cart-table li {
   display: flex;
-  /* flex-direction: row; */
   margin: 20px;
   text-align: center;
   align-items: center;
   border: 1px solid rgb(202, 202, 202);
+  overflow: auto;
 }
 
 .cart-table li::marker {
@@ -36,3 +34,51 @@
   width: 80px;
 }
 
+a span {
+  padding: 20px;
+}
+
+.cart-table li p {
+  padding-right: 30px;
+  margin: 0px;
+}
+
+.cart-item-menage {
+  position: absolute;
+  right: 15vw;
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+  align-items: center;
+  justify-items: center;
+}
+
+.trash-del {
+  transform: scale(1.2);
+  background: none;
+  border: none;
+  outline: none;
+  color: saddlebrown;
+}
+
+.trash-del:hover {
+  color: rgb(255, 106, 0);
+  transform: scale(1.4);
+ }
+
+ .total {
+   margin-left: 50vw;
+   padding-bottom: 5vh 0px 5vh 0px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 23vw;
+   font-size: 1.1rem;
+  }
+
+ .finalize-btn {
+   width: 120px;
+   height: 40px;
+   font-size: 1.1rem;
+  } 
+  

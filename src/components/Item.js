@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import '../style/Item.css'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import minerals from '../minerals.json'
 
-const Item = (match, addToCart) => {
-  const product = minerals[match.match.params.id - 1]
+const Item = (props) => {
+  const product = minerals[props.match.params.id - 1]
+  console.log(props.itemsQuantity);
   const [item, setItem] = useState(product)
-  // console.log(item);
+  console.log(item.image);
   const [productQuantity, setProductQuantity] = useState(1);
 
   const bgStyle = {
@@ -33,8 +34,41 @@ const Item = (match, addToCart) => {
     }
   }
 
-  const onAddToCart = () => {
-    addToCart(product, productQuantity);
+  const addToCart = (product, quantity) => {
+    const cartItems = props.cart;
+    let inCart = false;
+    cartItems.forEach(item => {
+      if (item.id === product.id) {
+        item.quantity = parseInt(item.quantity);
+        item.quantity += parseInt(quantity);
+        inCart = true;
+        console.log('update quantity to:', item.quantity);
+      }
+    });
+    if (!inCart) {
+      console.log('adding product not yet in cart');
+      cartItems.push({...product, quantity: parseInt(quantity)});
+    }
+  
+    props.setCart(cartItems);
+    props.updateQuantity();
+    props.updateTotal();
+    setProductQuantity(1)
+  }
+
+  const updateQuantity = () => {
+    let totalQuantity = 0;
+    props.cart.forEach(item => {
+    totalQuantity += parseInt(item.quantity) })
+    props.setItemsQuantity(totalQuantity)
+    console.log(totalQuantity);
+  }
+
+  const updateTotal = () => {
+    let totalValue = 0;
+    props.cart.forEach(item => {totalValue += parseInt(item.quantity) * parseFloat(item.price)})
+    props.setTotal(totalValue)
+    console.log(totalValue);
   }
       
       return (
@@ -42,7 +76,7 @@ const Item = (match, addToCart) => {
     <div className="top-row" style={bgStyle}><h1> Our Store </h1></div>
         <div className="item-div">
       <div className="image-display">
-      {/* <img src={item.image} alt={item.name}/> */}
+      <img src={item.image} alt={item.name}/>
       <img src="http://www.mineralstore.com.au/sales/images/C013.JPG" alt={item.name}/>
       </div>
       <div className="item-display">
@@ -55,7 +89,9 @@ const Item = (match, addToCart) => {
             <button className="add-rem" onClick={(e) => inputQuantityHandler(e)}>+</button>
               <input type="number" value={productQuantity} range={1-100} onChange={(e) => inputQuantityHandler(e)}></input>
             <button className="add-rem" onClick={(e) => inputQuantityHandler(e)}>-</button>
-            <button className="add-to-cart-button" onClick={() => onAddToCart()}>Add to Cart</button>
+            <button className="add-to-cart-button" onClick={() => addToCart(product, productQuantity)}>Add to Cart</button>
+    
+
           </div>
           </div>
         </div>

@@ -13,43 +13,24 @@ import minerals from "./minerals.json"
 
 const App = () => {
   
-  const [total, setTotal] = useState(10);
+  const [total, setTotal] = useState(0);
   const [itemsQuantity, setItemsQuantity] = useState(0);
-  // const [cart, setCart] = useState([]);
-  const [cart, setCart] = useState(minerals);
-
-
-  const addToCart = (product, quantity) => {
-    const cartItems = cart;
-    let inCart = false;
-    cartItems.forEach(item => {
-      if (item.id === product.id) {
-        item.count += quantity
-        inCart = true;
-      }
-    });
-    if (!inCart) {
-      cartItems.push({...product, count: 1});
-    }
-  
-    // setCart(cartItems);
-    // updateQuantity();
-    // updateTotal();
-    console.log(cart);
-  }
+  const [cart, setCart] = useState([]);
 
   const updateQuantity = () => {
     let totalQuantity = 0;
-    cart.forEach(item => { totalQuantity += item.count })
+    cart.forEach(item => {
+    totalQuantity += parseInt(item.quantity) })
     setItemsQuantity(totalQuantity)
+    console.log(totalQuantity);
   }
 
   const updateTotal = () => {
     let totalValue = 0;
-    cart.forEach(item => {totalValue += item.count * parseFloat(item.price)})
+    cart.forEach(item => {totalValue += parseInt(item.quantity) * parseFloat(item.price)})
     setTotal(totalValue)
+    console.log(totalValue);
   }
-
 
   return (
     <BrowserRouter>
@@ -59,12 +40,19 @@ const App = () => {
         <Route exact path="/" component={Home}/>
         <Route exact path="/about" component={About}/>
         <Route exact path="/store" component={Store}/> 
-        <Route exact path="/store/:id" component={Item}/> 
+        {/* <Route exact path="/store/:id" component={Item}/>  */}
         <Route 
           exact path="/store/:id" 
           render = {(props) => (
              <Item {...props}
-              addToCart={addToCart()}
+              cart = {cart}
+              setCart = {setCart}
+              itemsQuantity = {itemsQuantity}
+              setItemsQuantity = {setItemsQuantity}
+              total = {total}
+              setTotal = {setTotal}
+              updateQuantity = {updateQuantity}
+              updateTotal = {updateTotal}
               />
           )} /> 
         {/* <Route exact path="/store/:id">
@@ -75,9 +63,13 @@ const App = () => {
           render = {(props) => (
             <Cart {...props}
             cart = {cart}
+            setCart = {setCart}
             itemsQuantity = {itemsQuantity}
+            setItemsQuantity = {setItemsQuantity}
             total = {total}
-            addToCart = {() => addToCart()}
+            setTotal = {setTotal}
+            updateQuantity = {updateQuantity}
+            updateTotal = {updateTotal}
             />
           )}/>
 

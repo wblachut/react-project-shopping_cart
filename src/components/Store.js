@@ -1,5 +1,4 @@
-import React, { useState, useParams } from 'react'
-// import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import '../style/Store.css'
 import minerals from '../minerals.json'
 import { Link } from "react-router-dom";
@@ -14,24 +13,7 @@ const Store = (props) => {
     textDecoration: 'none',
     fontSize: '1.2rem'
   };
-
-  // useEffect(() => {
-  //   fetchItems();
-  // }, []);
-
-  // const fetchItems = async () => {
-  //   const fetchData = await fetch("https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/",  {headers: {
-  //     "X-API-Key": '98ddbf4c02054a939bfcb3f8cf7fe825'
-  //    }}
-  //   );
-
-  //   const data = await fetchData.json();
-  //   console.log(data);
-  // }
-  // const [items, setItems] = useState(data)
-
   const [items] = useState(minerals)
-  console.log(minerals);
 
   return (
     <div>
@@ -46,7 +28,6 @@ const Store = (props) => {
           </Link>
           <p className="item-origin">{item.origin}</p>
           <h5 className="item-price">{item.price}</h5>
-          <h5 className="item-price">{parseFloat(item.price)}</h5>
         </div>
       ))}
       </div>

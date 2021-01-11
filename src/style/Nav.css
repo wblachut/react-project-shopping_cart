@@ -16,7 +16,7 @@
 }
 
 .gh-icon {
-  margin-right: 10px;
+  margin-left: 5px;
   width: 40px;
   height: 40px;
 }
@@ -25,16 +25,21 @@
   display: inline;
 }
 
-.nav-links li:nth-child(4), .store-logo {
+.cart-li, .store-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .nav-links li {
-  padding: 10px;
+  padding: 5px 10px;
+  margin: 10px;
   align-items: center;
   justify-content: center;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.13);
 }
 
 .nav-links {
