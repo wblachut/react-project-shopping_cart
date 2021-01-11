@@ -1,0 +1,82 @@
+[
+  {
+      "id": 1,
+      "name": "Native Sulphur on Aragonite",
+      "price": "545.00 €",
+      "image": "./images/sulphur_aragonite.jpg",
+      "origin": "Cozzodisa Mine, Agrigento, Sicily, Italy.",
+      "dimensions": "125 x 95 x 60 mm",
+      "description": "Ex Luis Burillo specimen. Bright sulphur crystals to 15mm cover the aragonite surface of this specimen from an iconic location.",
+      "quantity": "0"
+    },
+  {
+      "id": 2,
+      "name": "Stibnite",
+      "price": "465.00 €",
+      "image": "./images/stibnite.jpg",
+      "origin": "Wuling Mine, Qingjiang, Jiangxi Province, China",
+      "dimensions": "135 x 85 x 65 mm",
+      "description": "A spray of metallic stibnite, with crystals to 80mm long. Some crystals show growth distortion. Mounted on an acrylic base to display well.",
+      "quantity": "0"
+    },
+  {
+      "id": 3,
+      "name": "Green Fluorite",
+      "price": "450.00 €",
+      "image": "./images/fluorite.jpg",
+      "origin": "Riemvasmaak, northern Cape Province, South Africa",
+      "dimensions": "135 x 85 x 65 mm",
+      "description": "Bright green octohedrons of fluorite from a classic African location.",
+      "quantity": "0"
+    },
+  {
+      "id": 4,
+      "name": "Cavanasite and Stilbite",
+      "price": "790.00 €",
+      "image": "./images/cavanasite_stilbite.jpg",
+      "origin": "Wagholi Quarry, Pune, Mararashta, India",
+      "dimensions": "110 x 90 x 80 mm",
+      "description": "A nice free standing specimen with the blue and cream of the minerals making for a pleasant contrast",
+      "quantity": "0"
+    },
+  {
+      "id": 5,
+      "name": "Native Sulphur on Aragonite",
+      "price": "545.00 €",
+      "image": "./images/sulphur_aragonite.jpg",
+      "origin": "Cozzodisa Mine, Agrigento, Sicily, Italy.",
+      "dimensions": "125 x 95 x 60 mm",
+      "description": "Ex Luis Burillo specimen. Bright sulphur crystals to 15mm cover the aragonite surface of this specimen from an iconic location.",
+      "quantity": "0"
+    },
+  {
+      "id": 6,
+      "name": "Stibnite",
+      "price": "465.00 €",
+      "image": "./images/stibnite.jpg",
+      "origin": "Wuling Mine, Qingjiang, Jiangxi Province, China",
+      "dimensions": "135 x 85 x 65 mm",
+      "description": "A spray of metallic stibnite, with crystals to 80mm long. Some crystals show growth distortion. Mounted on an acrylic base to display well.",
+      "quantity": "0"
+    },
+  {
+      "id": 7,
+      "name": "Green Fluorite",
+      "price": "450.00 €",
+      "image": "./images/fluorite.jpg",
+      "origin": "Riemvasmaak, northern Cape Province, South Africa",
+      "dimensions": "135 x 85 x 65 mm",
+      "description": "Bright green octohedrons of fluorite from a classic African location.",
+      "quantity": "0"
+    },
+  {
+      "id": 8,
+      "name": "Cavanasite and Stilbite",
+      "price": "790.99 €",
+      "image": "./images/cavanasite_stilbite.jpg",
+      "origin": "Wagholi Quarry, Pune, Mararashta, India",
+      "dimensions": "110 x 90 x 80 mm",
+      "description": "A nice free standing specimen with the blue and cream of the minerals making for a pleasant contrast",
+      "quantity": "0"
+    }
+]

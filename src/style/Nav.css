@@ -1,0 +1,64 @@
+.navbar, .navbar-header, .navbar-nav {
+  background-color: rgb(31, 19, 5);
+  color: white;
+  height: 8vh;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-header div {
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.gh-icon {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.right-elements {
+  display: inline;
+}
+
+.nav-links li:nth-child(4), .store-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.gh-icon {
+  color: #e9891b;
+  padding-right: 5px;
+  width: 30px;
+  text-decoration: none;
+}
+
+.item-quantity {
+  background-color: #e9891b;
+  border: 2px;
+  border-radius: 2opx;
+}
+
+.store-logo {
+  justify-items: center;
+  justify-content: center;
+  justify-self: center;
+}

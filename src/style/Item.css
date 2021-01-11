@@ -1,0 +1,39 @@
+.item-div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item-display {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.image-display img {
+  width: 35vw;
+}
+
+ p {
+  margin: 5px;
+}
+
+.item-description {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.item-display h5 {
+  margin: 5px;
+  font-size: 1.5rem;
+  color: darkgray ;
+}
+
+.origin {
+  color: rgb(75, 65, 9);
+  margin-bottom: 20px;
+}
+
+.item-add-to-cart {
+  margin-top: 5vh;
+}

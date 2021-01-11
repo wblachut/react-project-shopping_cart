@@ -1,0 +1,38 @@
+.cart-div {
+  width: 80vw;
+  border: 2px solid rgb(109, 109, 109);
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10vh;
+
+}
+
+.cart-title {
+  text-align: center;
+  padding: 40px;
+}
+
+
+
+.cart-table  {
+  align-items: center;
+}
+
+.cart-table li {
+  display: flex;
+  /* flex-direction: row; */
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.cart-table li::marker {
+  padding-right: 30px;
+  font-size: 1.2rem;
+}
+
+.cart-table li img {
+  width: 80px;
+}
+

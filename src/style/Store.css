@@ -1,0 +1,42 @@
+.store-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.items-display {
+  display: flex;
+  width: 80vw;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.store-item {
+  width: 250px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.store-item p {
+  text-decoration: none;
+  word-wrap: break-word;
+  margin: 3px;
+}
+
+.items-display img {
+  width: 250px;
+}
+
+.item-origin {
+  font-style: italic;
+  /* font-size: 0.9rem; */
+}
+
+.item-price {
+  color: rgb(75, 65, 9);
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
