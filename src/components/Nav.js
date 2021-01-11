@@ -14,7 +14,7 @@ const Nav = (props) => {
       <div className="container">
         <div className="navbar-header">
           <div className="store-logo">
-          <a href="https://wblachut.github.io/react-project-shopping_cart/" className="gh-btn">
+          <a href="https://github.com/wblachut/react-project-shopping_cart//" className="gh-btn">
               <FontAwesomeIcon icon={["fab", "github"]}  className="gh-icon" />
                 </a><i className="fab fa-github"></i> 
             SomeGemShop</div>
