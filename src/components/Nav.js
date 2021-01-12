@@ -20,13 +20,10 @@ const Nav = (props) => {
             SomeGemShop</div>
           <div className="right-elements">
             <ul className="nav-links">
-              <Link style={linkStyle} to='/'><li>Home</li></Link>
-              <Link style={linkStyle} to='/store'><li>Store</li></Link>
-              <Link style={linkStyle} to='/about'><li>About</li></Link>
-              <Link style={linkStyle} to='/cart'><li className="cart-li"> Cart <FontAwesomeIcon icon={["fas", "shopping-basket"]} className="gh-icon" /> <i className="fab fa-github"></i></li></Link>
-              
-              <Link style={linkStyle} to='/cart'><div className="item-quantity">{props.itemsQuantity !== "0" ? "" : props.itemsQuantity} </div></Link>
-              <li></li>
+              <Link style={linkStyle} to='/react-project-shopping_cart/'><li>Home</li></Link>
+              <Link style={linkStyle} to='/react-project-shopping_cart/store'><li>Store</li></Link>
+              <Link style={linkStyle} to='/react-project-shopping_cart/about'><li>About</li></Link>
+              <Link style={linkStyle} to='/react-project-shopping_cart/cart'><li className="cart-li"> Cart <FontAwesomeIcon icon={["fas", "shopping-basket"]} className="gh-icon" /> <i className="fab fa-github"></i><div className="item-quantity">{props.itemsQuantity} </div></li></Link>
             </ul>
           </div>
         </div>

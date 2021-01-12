@@ -22,7 +22,7 @@ const Store = (props) => {
       <div className="items-display">
       {items.map(item => (
         <div className="store-item" key={item.id}>
-          <Link style={linkStyle} to={`store/${item.id} `}>
+          <Link style={linkStyle} to={`/react-project-shopping_cart/store/${item.id} `}>
           <img src={item.image} alt={item.name}/>
           <p className="item-name">{item.name}</p>
           </Link>

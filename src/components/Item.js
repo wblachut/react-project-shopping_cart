@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import '../style/Item.css'
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import minerals from '../minerals.json'
 
 const Item = (props) => {
   const product = minerals[props.match.params.id - 1]
   console.log(props.itemsQuantity);
-  const [item, setItem] = useState(product)
+  const [item] = useState(product)
   console.log(item.image);
   const [productQuantity, setProductQuantity] = useState(1);
 
@@ -28,7 +28,7 @@ const Item = (props) => {
     if (e.target.textContent === '+') {
     setProductQuantity(productQuantity + 1);
   } else if (e.target.textContent === '-') {
-    setProductQuantity(productQuantity - 1);
+    (productQuantity > 1) ? setProductQuantity(productQuantity - 1) :  setProductQuantity(1) ;
     } else {
       setProductQuantity(e.target.value);
     }
@@ -37,6 +37,9 @@ const Item = (props) => {
   const addToCart = (product, quantity) => {
     const cartItems = props.cart;
     let inCart = false;
+    if (quantity < 1) {
+      return
+    }
     cartItems.forEach(item => {
       if (item.id === product.id) {
         item.quantity = parseInt(item.quantity);
@@ -55,21 +58,6 @@ const Item = (props) => {
     props.updateTotal();
     setProductQuantity(1)
   }
-
-  const updateQuantity = () => {
-    let totalQuantity = 0;
-    props.cart.forEach(item => {
-    totalQuantity += parseInt(item.quantity) })
-    props.setItemsQuantity(totalQuantity)
-    console.log(totalQuantity);
-  }
-
-  const updateTotal = () => {
-    let totalValue = 0;
-    props.cart.forEach(item => {totalValue += parseInt(item.quantity) * parseFloat(item.price)})
-    props.setTotal(totalValue)
-    console.log(totalValue);
-  }
       
       return (
         <div>
@@ -87,7 +75,7 @@ const Item = (props) => {
           <h5>{item.price}</h5>
           <div className="item-add-to-cart">
             <button className="add-rem" onClick={(e) => inputQuantityHandler(e)}>+</button>
-              <input type="number" value={productQuantity} range={1-100} onChange={(e) => inputQuantityHandler(e)}></input>
+              <input type="number" value={productQuantity} min="1" max="50" onChange={(e) => inputQuantityHandler(e)}></input>
             <button className="add-rem" onClick={(e) => inputQuantityHandler(e)}>-</button>
             <button className="add-to-cart-button" onClick={() => addToCart(product, productQuantity)}>Add to Cart</button>
     
@@ -95,7 +83,7 @@ const Item = (props) => {
           </div>
           </div>
         </div>
-          <Link style={linkStyle} to={`/store`}><span className="back-sp">Back to Store</span></Link>
+          <Link style={linkStyle} to={`/react-project-shopping_cart/store`}><span className="back-sp">Back to Store</span></Link>
       </div>
   );
 }

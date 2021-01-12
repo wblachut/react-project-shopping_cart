@@ -11,14 +11,16 @@
 }
 
 .navbar-header div {
-  padding: 20px;
+  padding: 10px;
   font-size: 1.5rem;
 }
 
 .gh-icon {
-  margin-left: 5px;
+  margin-left: 8px;
   width: 40px;
   height: 40px;
+  padding-right: 7px;
+  color: #e9891b;
 }
 
 .right-elements {
@@ -29,6 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 4px 5px !important;
 }
 
 .nav-links li {
@@ -49,17 +52,20 @@
   list-style: none;
 }
 
-.gh-icon {
-  color: #e9891b;
-  padding-right: 5px;
-  width: 30px;
-  text-decoration: none;
-}
-
 .item-quantity {
-  background-color: #e9891b;
+  background-color: rgb(131, 58, 6);
   border: 2px;
-  border-radius: 2opx;
+  border-radius: 50px;
+  font-size: 0.8rem !important;
+  height: 20px;
+  width: 20px;
+  padding: 0px !important;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  font-weight: 600;
+  margin-left: -12px;
+  margin-top: 19px;
 }
 
 .store-logo {

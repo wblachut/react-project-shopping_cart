@@ -62,7 +62,7 @@ const Cart = (props) => {
         <ol>
         {props.cart.map((item) => (
           <li key={item.id}>
-          <Link style={linkStyle} to={`store/${item.id} `}>
+          <Link style={linkStyle} to={`/react-project-shopping_cart/store/${item.id} `}>
             <img src={item.image} alt={item.name}/>
             <span className="">{item.name}</span>
           </Link>

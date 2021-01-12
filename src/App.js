@@ -9,8 +9,6 @@ import Item from "./components/Item";
 import About from "./components/About";
 import Cart from "./components/Cart";
 
-import minerals from "./minerals.json"
-
 const App = () => {
   
   const [total, setTotal] = useState(0);
@@ -28,7 +26,7 @@ const App = () => {
   const updateTotal = () => {
     let totalValue = 0;
     cart.forEach(item => {totalValue += parseInt(item.quantity) * parseFloat(item.price)})
-    setTotal(totalValue)
+    setTotal(totalValue.toFixed(2))
     console.log(totalValue);
   }
 
@@ -37,12 +35,12 @@ const App = () => {
       <div className="App">
       <Nav itemsQuantity={itemsQuantity}/>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/store" component={Store}/> 
+        <Route exact path="/react-project-shopping_cart/" component={Home}/>
+        <Route exact path="/react-project-shopping_cart/about" component={About}/>
+        <Route exact path="/react-project-shopping_cart/store" component={Store}/> 
         {/* <Route exact path="/store/:id" component={Item}/>  */}
         <Route 
-          exact path="/store/:id" 
+          exact path="/react-project-shopping_cart/store/:id" 
           render = {(props) => (
              <Item {...props}
               cart = {cart}
@@ -59,7 +57,7 @@ const App = () => {
             <Item addToCart={() => addToCart()} total = {total} />
         </Route> */}
         <Route 
-          exact path="/cart" 
+          exact path="/react-project-shopping_cart/cart" 
           render = {(props) => (
             <Cart {...props}
             cart = {cart}
