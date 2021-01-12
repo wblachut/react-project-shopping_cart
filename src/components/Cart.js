@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 import '../style/Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-
 const Cart = (props) => {
   const bgStyle = {
     backgroundImage: 'url(https://images.unsplash.com/photo-1564275513-b6fbcb2f0962?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1787&q=80)',
-    backgroundPosition:'0% 30%',
+    backgroundPosition:'0% 39%',
   };
 
   const linkStyle = {
@@ -69,23 +67,21 @@ const Cart = (props) => {
           <div className="cart-item-menage">
           <p className="item-price">{item.price}</p>
           <button className="add-rem" onClick={(id) => {onAddQuantity(item.id)}}>+</button>
-
             {item.quantity}
-
-            <button className="add-rem" onClick={(id) => {onSubtractQuantity(item.id)}}>-</button>
-            
-
-            <button  id={item.id} onClick = {(id) => onDeleteItem(item.id)}
+          <button className="add-rem" onClick={(id) => {onSubtractQuantity(item.id)}}>-</button>
+          <button  id={item.id} onClick = {(id) => onDeleteItem(item.id)}
                   className="trash-del"><FontAwesomeIcon icon={["fas", "trash"]} className= "trash-icon"/></button>
                   </div>
           </li>  
         ))}
         <li>
         </li>
+          <Link style={linkStyle} to={`/react-project-shopping_cart/store`}><span className="back-sp">Back to store</span></Link>
         <div className="total"><b>Total: {props.total} €</b>
         <button className="finalize-btn" onClick={props.addToCart}>Finalize</button>
         </div>
         </ol>
+
       </div>
       </div><div></div>
       </div>

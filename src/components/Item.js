@@ -5,9 +5,7 @@ import minerals from '../minerals.json'
 
 const Item = (props) => {
   const product = minerals[props.match.params.id - 1]
-  console.log(props.itemsQuantity);
   const [item] = useState(product)
-  console.log(item.image);
   const [productQuantity, setProductQuantity] = useState(1);
 
   const bgStyle = {
@@ -49,7 +47,6 @@ const Item = (props) => {
       }
     });
     if (!inCart) {
-      console.log('adding product not yet in cart');
       cartItems.push({...product, quantity: parseInt(quantity)});
     }
   
@@ -79,7 +76,6 @@ const Item = (props) => {
             <button className="add-rem" onClick={(e) => inputQuantityHandler(e)}>-</button>
             <button className="add-to-cart-button" onClick={() => addToCart(product, productQuantity)}>Add to Cart</button>
     
-
           </div>
           </div>
         </div>

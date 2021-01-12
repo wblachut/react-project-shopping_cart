@@ -1,7 +1,8 @@
 .navbar, .navbar-header, .navbar-nav {
   background-color: rgb(31, 19, 5);
   color: white;
-  height: 8vh;
+  height: 7vh;
+  z-index: 5;
 }
 
 .navbar-header {
@@ -27,16 +28,21 @@
   display: inline;
 }
 
+.store-logo {
+  font-family: 'Merienda', cursive;
+
+}
+
 .cart-li, .store-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4px 5px !important;
+  margin: 0px 5px !important;
 }
 
 .nav-links li {
   padding: 5px 10px;
-  margin: 10px;
+  margin: 5px 10px;
   align-items: center;
   justify-content: center;
 }

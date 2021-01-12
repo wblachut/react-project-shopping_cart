@@ -10,7 +10,6 @@ import About from "./components/About";
 import Cart from "./components/Cart";
 
 const App = () => {
-  
   const [total, setTotal] = useState(0);
   const [itemsQuantity, setItemsQuantity] = useState(0);
   const [cart, setCart] = useState([]);
@@ -38,7 +37,6 @@ const App = () => {
         <Route exact path="/react-project-shopping_cart/" component={Home}/>
         <Route exact path="/react-project-shopping_cart/about" component={About}/>
         <Route exact path="/react-project-shopping_cart/store" component={Store}/> 
-        {/* <Route exact path="/store/:id" component={Item}/>  */}
         <Route 
           exact path="/react-project-shopping_cart/store/:id" 
           render = {(props) => (
@@ -53,9 +51,6 @@ const App = () => {
               updateTotal = {updateTotal}
               />
           )} /> 
-        {/* <Route exact path="/store/:id">
-            <Item addToCart={() => addToCart()} total = {total} />
-        </Route> */}
         <Route 
           exact path="/react-project-shopping_cart/cart" 
           render = {(props) => (
@@ -70,8 +65,6 @@ const App = () => {
             updateTotal = {updateTotal}
             />
           )}/>
-
-        <Route exact path="/cart" component={Cart}/>
       </Switch>
       </div>
     </BrowserRouter>
