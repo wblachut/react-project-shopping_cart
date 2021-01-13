@@ -49,7 +49,7 @@ const Item = (props) => {
     if (!inCart) {
       cartItems.push({...product, quantity: parseInt(quantity)});
     }
-  
+    
     props.setCart(cartItems);
     props.updateQuantity();
     props.updateTotal();
@@ -61,8 +61,7 @@ const Item = (props) => {
     <div className="top-row" style={bgStyle}><h1> Our Store </h1></div>
         <div className="item-div">
       <div className="image-display">
-      <img src={item.image} alt={item.name}/>
-      <img src="http://www.mineralstore.com.au/sales/images/C013.JPG" alt={item.name}/>
+      <img src={`../${item. image}`} alt={item.name}/>
       </div>
       <div className="item-display">
       <h1>{item.name}</h1>

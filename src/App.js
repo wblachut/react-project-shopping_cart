@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './style/App.css';
 import Home from "./components/Home";
@@ -13,6 +12,7 @@ const App = () => {
   const [total, setTotal] = useState(0);
   const [itemsQuantity, setItemsQuantity] = useState(0);
   const [cart, setCart] = useState([]);
+  const [isHome, setIsHome] = useState(false);
 
   const updateQuantity = () => {
     let totalQuantity = 0;
@@ -32,9 +32,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
-      <Nav itemsQuantity={itemsQuantity}/>
+      <Nav itemsQuantity={itemsQuantity} isHome={isHome}/>
       <Switch>
-        <Route exact path="/react-project-shopping_cart/" component={Home}/>
+        <Route exact path="/react-project-shopping_cart/" render = {(props) => (
+          <Home {...props} isHome={isHome} setIsHome={setIsHome}/>            )}/> 
         <Route exact path="/react-project-shopping_cart/about" component={About}/>
         <Route exact path="/react-project-shopping_cart/store" component={Store}/> 
         <Route 

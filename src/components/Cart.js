@@ -18,14 +18,15 @@ const Cart = (props) => {
     fontWeight: '600'
   };
 
-  const onDeleteItem = (id) => {
-    let cartList = [...props.cart].filter((item) => item.id !== id);
-    props.setCart(cartList);
-    props.updateQuantity();
-    props.updateTotal();
+  const onDeleteItem = async (id) => {
+    let cartList = [...props.cart];
+    let updatedCartList = cartList.filter((item) => item.id !== id);
+    await props.setCart(updatedCartList);
+    await props.updateQuantity();
+    await props.updateTotal();
   }
 
-  const onAddQuantity = (id) => {
+  const onAddQuantity = async (id) => {
     let cartList = [...props.cart]
     cartList.forEach(item => {
       if (item.id === id) {
@@ -33,22 +34,22 @@ const Cart = (props) => {
         console.log('update quantity to:', item.quantity);
       }
     });
-    props.setCart(cartList);
-    props.updateQuantity();
-    props.updateTotal();
+    await props.setCart(cartList);
+    await props.updateQuantity();
+    await props.updateTotal();
   }
 
-  const onSubtractQuantity = (id) => {
+  const onSubtractQuantity = async (id) => {
     let cartList = [...props.cart]
-    console.log(cartList);
     cartList.forEach(item => {
       if (item.id === id && item.quantity > 1) {
         item.quantity -= 1;
         console.log('update quantity to:', item.quantity);
       }
     });
-    props.updateQuantity();
-    props.updateTotal();
+    await props.setCart(cartList);
+    await props.updateQuantity();
+    await props.updateTotal();
   }
 
   return (

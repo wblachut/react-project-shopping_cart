@@ -49,9 +49,14 @@ body {
   height: 100vh;
 }
 
+.gh-icon {
+  margin: 20px 0px 0px 20px;
+  transform: scale(1.6);
+}
+
 .home {
   padding: 0px;
-  height: 93vh;
+  height: 100vh;
   overflow: hidden;
   z-index: 1;
   font-family: 'Merienda', cursive;
@@ -63,14 +68,14 @@ body {
 .home p, .shop-now-btn {
   position: absolute;
   right: 5%;
-  top: 38%;
+  top: 34%;
   text-align: center;
   justify-content: center;
 }
 
 .shop-now-btn {
   right: 16%;
-  top: 50%;
+  top: 47%;
   border: none;
   outline: none;
   background-image: linear-gradient(to right, #AF83E3 0%, #391D82  51%, #AF83E3  100%);
@@ -127,9 +132,6 @@ body {
   background-position: center;
 }
 
-.about-img {
-}
-
 .item-add-to-cart {
   font-size: 1.4rem;
 }
@@ -178,6 +180,13 @@ body {
 .finalize-btn:hover  {
   background-color: saddlebrown;
   transform: scale(1.05);
+}
+
+.add-rem:active,  
+.add-to-cart-button:active,
+.finalize-btn:active  {
+  background-color: rgb(0, 0, 0);
+  transform: scale(0.95);
 }
 
 input::-webkit-outer-spin-button,
