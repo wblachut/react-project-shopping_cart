@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-project-shopping_cart/static/css/main.7c747ee7.chunk.css",
-    "main.js": "/react-project-shopping_cart/static/js/main.74270c48.chunk.js",
-    "main.js.map": "/react-project-shopping_cart/static/js/main.74270c48.chunk.js.map",
+    "main.css": "/react-project-shopping_cart/static/css/main.0cdab90a.chunk.css",
+    "main.js": "/react-project-shopping_cart/static/js/main.a950fb82.chunk.js",
+    "main.js.map": "/react-project-shopping_cart/static/js/main.a950fb82.chunk.js.map",
     "runtime-main.js": "/react-project-shopping_cart/static/js/runtime-main.70357d3b.js",
     "runtime-main.js.map": "/react-project-shopping_cart/static/js/runtime-main.70357d3b.js.map",
-    "static/js/2.db697388.chunk.js": "/react-project-shopping_cart/static/js/2.db697388.chunk.js",
-    "static/js/2.db697388.chunk.js.map": "/react-project-shopping_cart/static/js/2.db697388.chunk.js.map",
+    "static/js/2.1532d335.chunk.js": "/react-project-shopping_cart/static/js/2.1532d335.chunk.js",
+    "static/js/2.1532d335.chunk.js.map": "/react-project-shopping_cart/static/js/2.1532d335.chunk.js.map",
     "index.html": "/react-project-shopping_cart/index.html",
-    "static/css/main.7c747ee7.chunk.css.map": "/react-project-shopping_cart/static/css/main.7c747ee7.chunk.css.map",
-    "static/js/2.db697388.chunk.js.LICENSE.txt": "/react-project-shopping_cart/static/js/2.db697388.chunk.js.LICENSE.txt"
+    "static/css/main.0cdab90a.chunk.css.map": "/react-project-shopping_cart/static/css/main.0cdab90a.chunk.css.map",
+    "static/js/2.1532d335.chunk.js.LICENSE.txt": "/react-project-shopping_cart/static/js/2.1532d335.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.70357d3b.js",
-    "static/js/2.db697388.chunk.js",
-    "static/css/main.7c747ee7.chunk.css",
-    "static/js/main.74270c48.chunk.js"
+    "static/js/2.1532d335.chunk.js",
+    "static/css/main.0cdab90a.chunk.css",
+    "static/js/main.a950fb82.chunk.js"
   ]
 }
