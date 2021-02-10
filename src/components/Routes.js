@@ -7,4 +7,3 @@ import Shop from "./Shop";
 import Item from "./Item";
 
 // Link
-
