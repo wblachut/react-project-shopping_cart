@@ -10,7 +10,7 @@ Project is a part of The Odin Project [JavaScript learning curriculum](https://w
 
 ## Description
 
-Well, even tho I am learning web development, there will still be some place for geology in my heart... So I decided that the Shopping Cart project will be a page for mineral shop. This project is a React App with functional components. All products are stored in json filed called minerals - with all the necessary information. From there I use JSX to display all what this online shop can offer. If you add something to cart, react hooks will handle letting know the app and will take care of displaying your items. What else? To switch between pages react router concept was implemented.
+Well, even tho I am learning web development, there will still be some place for geology in my heart... So I decided that the Shopping Cart project will be a page for mineral shop. This project is a [React App](https://reactjs.org/) with functional components. All products are stored in json filed called minerals - with all the necessary information. From there I use `JSX` to display all what this online shop can offer. If you add something to cart, [React Hooks](https://reactjs.org/docs/hooks-intro.html) will handle letting know the app and will take care of displaying your items. What else? To switch between pages [React Router](https://reactrouter.com/) concept was implemented.
 
 ![](/public/images/shop.gif)
 
