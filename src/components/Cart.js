@@ -113,7 +113,7 @@ const Cart = (props) => {
 							<b>Total: {props.total} €</b>
 							<button
 								className="finalize-btn"
-								onClick={() => console.log("Finalize")}
+								onClick={() => console.log("Finalized !!")}
 							>
 								Finalize
 							</button>
