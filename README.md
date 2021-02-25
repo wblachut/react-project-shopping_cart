@@ -21,7 +21,7 @@ Well, even tho I am learning web development, there will still be some place for
 - React Router
 - Passing the props with router
 
-# Tools:
+## Tools:
 
 - Visual Studio Code
 - Javascript
