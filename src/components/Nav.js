@@ -16,27 +16,45 @@ const Nav = (props) => {
 			<nav className="navbar navbar-default">
 				<div className="container">
 					<div className="navbar-header">
-						<div className="store-logo"> SomeGemShop </div>
+						<Link style={linkStyle} to="/react-project-shopping_cart/">
+							<div className="store-logo"> SomeGemShop </div>
+						</Link>
 						<div className="right-elements">
 							<ul className="nav-links">
 								<Link style={linkStyle} to="/react-project-shopping_cart/">
-									<li>Home</li>
+									<li>
+										<span className="nav-link-name">Home</span>
+										<FontAwesomeIcon
+											icon={["fas", "home"]}
+											className="fa-icon icon-home sub"
+										/>
+									</li>
 								</Link>
 								<Link style={linkStyle} to="/react-project-shopping_cart/store">
-									<li>Store</li>
+									<li>
+										<span className="nav-link-name">Store</span>
+										<FontAwesomeIcon
+											icon={["fas", "gem"]}
+											className="fa-icon sub"
+										/>
+									</li>
 								</Link>
 								<Link style={linkStyle} to="/react-project-shopping_cart/about">
-									<li>About</li>
+									<li>
+										<span className="nav-link-name">About</span>
+										<FontAwesomeIcon
+											icon={["fas", "users"]}
+											className="fa-icon sub"
+										/>
+									</li>
 								</Link>
 								<Link style={linkStyle} to="/react-project-shopping_cart/cart">
 									<li className="cart-li">
-										{" "}
-										Cart{" "}
+										<span className="nav-link-name">Cart</span>
 										<FontAwesomeIcon
 											icon={["fas", "shopping-basket"]}
 											className="fa-icon"
-										/>{" "}
-										<i className="fab fa-github"></i>
+										/>
 										{props.itemsQuantity !== 0 && (
 											<div className="item-quantity">
 												{" "}

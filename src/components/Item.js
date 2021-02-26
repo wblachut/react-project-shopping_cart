@@ -17,11 +17,6 @@ const Item = (props) => {
 	const linkStyle = {
 		color: "brown",
 		textDecoration: "none",
-		fontSize: "1.2rem",
-		position: "absolute",
-		left: "50%",
-		bottom: "10%",
-		transform: "translateX(-50%)",
 	};
 
 	const inputQuantityHandler = (e) => {

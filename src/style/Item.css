@@ -37,3 +37,10 @@
 .item-add-to-cart {
   margin-top: 5vh;
 }
+
+.back-sp {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+}

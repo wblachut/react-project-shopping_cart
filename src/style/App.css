@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 
 body > #root > div {
   height: 100vh;
@@ -13,8 +13,7 @@ body {
   height: 15vh;
   margin-bottom: 10vh;
   justify-content: center;
-  background-position: center; 
-
+  background-position: center;
 }
 
 .top-row h1 {
@@ -25,7 +24,7 @@ body {
   margin: 0px;
   text-align: center;
   color: #fff;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   text-shadow: 0px 0px 5px black;
 }
 
@@ -54,18 +53,23 @@ body {
   transform: scale(1.6);
 }
 
+.sub {
+  display: none;
+}
+
 .home {
   padding: 0px;
   height: 100vh;
   overflow: hidden;
   z-index: 1;
-  font-family: 'Merienda', cursive;
-  color: #391D82;
+  font-family: "Merienda", cursive;
+  color: #391d82;
   font-size: 1.1rem;
-  background-image: url('https://images.unsplash.com/photo-1534592302589-d4f8f14c6f47?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1956&q=80');
+  background-image: url("https://images.unsplash.com/photo-1534592302589-d4f8f14c6f47?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1956&q=80");
 }
 
-.home p, .shop-now-btn {
+.home p,
+.shop-now-btn {
   position: absolute;
   right: 5%;
   top: 34%;
@@ -78,20 +82,25 @@ body {
   top: 47%;
   border: none;
   outline: none;
-  background-image: linear-gradient(to right, #AF83E3 0%, #391D82  51%, #AF83E3  100%);
+  background-image: linear-gradient(
+    to right,
+    #af83e3 0%,
+    #391d82 51%,
+    #af83e3 100%
+  );
   margin-top: 15px;
   padding: 15px 45px;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    font-family: inherit;
+  font-family: inherit;
 }
 
 .shop-now-btn:hover {
@@ -117,14 +126,14 @@ body {
 
 .about h2 {
   padding-top: 10vh;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
 }
 
 .about-img-wrapper {
   border: 0px solid;
   border-radius: 500px;
   overflow: hidden;
-  background-image: url('https://images.unsplash.com/photo-1551947391-249dcb8ed976?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=80');
+  background-image: url("https://images.unsplash.com/photo-1551947391-249dcb8ed976?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=80");
 
   width: 200px;
   height: 200px;
@@ -151,19 +160,19 @@ body {
 
 .item-add-to-cart input {
   cursor: pointer;
-  background:  none;
+  background: none;
   border: none;
   font-size: 1.4rem;
-  outline:  none;
+  outline: none;
   color: rgb(105, 105, 105);
   width: 30px;
   height: 30px;
   margin-right: 10px;
   margin-left: 20px;
-
 }
 
-.add-to-cart-button, .finalize-btn {
+.add-to-cart-button,
+.finalize-btn {
   margin-left: 20px;
   border: 2px solid white;
   cursor: pointer;
@@ -175,16 +184,16 @@ body {
   outline: none;
 }
 
-.add-rem:hover,  
+.add-rem:hover,
 .add-to-cart-button:hover,
-.finalize-btn:hover  {
+.finalize-btn:hover {
   background-color: saddlebrown;
   transform: scale(1.05);
 }
 
-.add-rem:active,  
+.add-rem:active,
 .add-to-cart-button:active,
-.finalize-btn:active  {
+.finalize-btn:active {
   background-color: rgb(0, 0, 0);
   transform: scale(0.95);
 }
@@ -192,4 +201,134 @@ body {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.toggle-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .toggle-menu {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .shop-now-btn {
+    top: 80%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .store-logo {
+    margin: 0px !important;
+  }
+
+  .sub {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0px !important;
+    margin: 0% !important;
+  }
+
+  .nav-link-name {
+    display: none;
+  }
+
+  .icon-home {
+    display: none;
+  }
+
+  .fa-icon {
+    margin-left: 0px !important;
+    padding: 0px 10% !important;
+    width: 15px;
+    height: 15px;
+    color: #e9891b;
+  }
+  .item-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-display {
+    width: 90vw !important;
+  }
+
+  .item-display h1 {
+    font-size: 1.2rem;
+  }
+
+  .item-display p {
+    font-size: 0.8rem;
+    margin: 2px;
+  }
+
+  .image-display {
+    /* height: 40vh; */
+    display: flex;
+    margin-top: -10%;
+    width: 80vw;
+    justify-content: center;
+  }
+
+  .image-display img {
+    width: 50vw !important;
+  }
+
+  .item-add-to-cart {
+    margin-top: 1vh !important;
+    justify-self: center;
+  }
+
+  .back-sp {
+    bottom: 1%;
+  }
+
+  .cart-div {
+    width: 94vw !important;
+    margin-top: -10% !important;
+  }
+
+  .cart-title {
+    padding: 2px !important;
+  }
+
+  .cart-table ol {
+    padding: 0px !important;
+    font-size: .8rem !important;
+  }
+
+  .cart-table li {
+    margin: 5px !important;
+  }
+
+  .cart-div li a span {
+    padding: 4px !important;
+    font-size: .6rem !important;
+  }
+  .cart-item-menage {
+    transform: scale(.7);
+  }
+
+  .total {
+    margin-left: 10vw !important;
+    width: 80vw !important;
+  }
+
+  .cart-div .back-sp {
+    position: static;
+    font-size: .8rem !important;
+    transform: unset;
+  }
+
+  .cart-div p {
+    padding: 0px !important;
+    width: 60px !important;
+  }
 }

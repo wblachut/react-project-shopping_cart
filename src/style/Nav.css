@@ -22,22 +22,28 @@
   height: 40px;
   padding-right: 7px;
   color: #e9891b;
+  justify-self: center;
 }
 
 .right-elements {
   display: inline;
+  padding: 0%;
+  overflow: hidden;
 }
 
 .store-logo {
   font-family: 'Merienda', cursive;
-
 }
 
-.cart-li, .store-logo {
+.cart-li, .store-logo, .nav-links li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px 5px !important;
+  margin: 0px 5px;
+}
+
+.nav-links li {
+  margin: 0px 0px !important;
 }
 
 .nav-links li {
@@ -48,7 +54,10 @@
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px inset rgba(255, 106, 0, 0.616);
+  /* background-color: rgba(184, 127, 53, 0.24); */
+  color: rgb(255, 106, 0) !important;
 }
 
 .nav-links {
@@ -56,6 +65,7 @@
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  padding: 0px;
 }
 
 .item-quantity {
